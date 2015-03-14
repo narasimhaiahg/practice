@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>HSAPlanner - HSA Asset Allocation Calculator</title>
+  <meta name="description" content="">
+  <meta name="author" content="Devenir">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="http://hsaplanner.com/hsaplanner/hsaalloccalc/css/custom-theme/jquery-ui-1.8.16.custom.css">
+  <link rel="stylesheet" href="http://hsaplanner.com/hsaplanner/hsaalloccalc/css/ui.css">
+	<link href="./assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <!-- JS -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  
+  <!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css">
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/ie7.css"><![endif]-->
+  <script type="text/javascript" src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/swfobject.js"></script>
+
+  
+
+</head>
+
+<body>
+	
+  <div id="wrapper">
+		<div id="content">
+
+			<header>
+				<img class="logo" src="img/HSAPlanner_204x35.png" alt="HSA Planner" />
+				<h1>HSA Asset Allocation Calculator</h1>
+			</header>
+
+			<div id="sliders">
+				<div id="inputs">
+				<section min=18 max=100>
+					<div class="info">
+						<h3>Age<a class="helpBtn">i</a></h3>
+						<p class="amount"><span class="hl"></span><span class="output">55</span></p>
+					</div>
+					<div class="slider"></div>
+					<p class="help"><b>Age</b>Your current age<span class="closeHelp">x</span></p>
+				</section>
+
+				<section min=0 max=100>
+					<div class="info">
+						<h3>Current HSA Balance<a class="helpBtn">i</a></h3>
+						<p class="amount"><span class="hl"></span><span class="output">5</span>k</p>
+					</div>
+					<div class="slider"></div>
+					<p class="help"><b>Current HSA Balance</b>The current account balance in your health savings account including any invested balances.<span class="closeHelp">x</span></p>
+				</section>
+				
+				<section min=0 max=10>
+					<div class="info">
+						<h3>Anticipated Annual HSA Contributions<a class="helpBtn">i</a></h3>
+						<p class="amount"><span class="hl"></span><span class="output">2</span>k</p>
+					</div>
+					<div class="slider"></div>
+					<p class="help"><b>Anticipated Annual HSA Contributions</b>Expected annual dollar contributions to your HSA based on either individual or family policy.<span class="closeHelp">x</span></p>
+				</section>
+				
+				<section class="radio">
+					<div class="info">
+						<h3><span>General Health</span><a class="helpBtn" alt="Please choose the description below which most closely represents your current state of health.">i</a></h3>
+						<p class="amount"><span class="hl"></span><span class="output">Average</span></p>
+					</div>	
+
+					<div class="radioBtns">
+						<a alt="Chronic medical condition or have a strong family history of chronic diseases, overweight, smoke regularly, don�t exercise, poor dietary habits, and do not utilize preventative medicine.">Poor</a>
+						<a alt="Chronic medical condition under control, family history of chronic diseases, slightly overweight, and get little exercise.">Fair</a>
+						<a class="selected" alt="No chronic medical condition, try to exercise and eat healthy when possible but often do not.">Average</a>
+						<a class="twolines" alt="Little family history of chronic medical conditions, frequently exercise and have good dietary habits.">Above Average</a>
+						<a alt="Live an active lifestyle with regular exercise, follow recommended dietary guidelines, and regularly utilize preventive medical services.">Excellent</a>
+					</div>
+						
+					<p class="help"></p>
+				</section>
+				
+				<section min=0 max=25>
+					<div class="info">
+						<h3>Estimated Annual OOP Healthcare Costs<a class="helpBtn">i</a></h3>
+						<p class="amount"><span class="hl"></span><span class="output">6</span>k</p>
+					</div>
+					<div class="slider"></div>
+					<p class="help"><b>Estimated Annual Out of Pocket Medical Expenses (Medical + Perscriptions - less Insurance Payments)</b>The approximate dollar amount you spend out of your own pocket on medical expenses not covered by insurance on an annual basis, i.e. preventative care, immunizations, medications, etc.<span class="closeHelp">x</span></p>
+				</section>
+				
+				<section class="radio">
+					<div class="info">
+						<h3>Risk tolerance</h3>
+						<p class="amount"><span class="hl"></span><span class="output thin">Low</span></p>
+					</div>	
+
+					<div class="radioBtns">
+						<a class="selected" alt="I am very concerned about my investments losing value and would sell quickly if my investments lose value.">Low</a>
+						<a class="twolines" alt="Daily market fluctuations concern me, but I tend not to overreact.  If my investment loses 5% or more over a quarter, I would sell.">Fairly Low</a>
+						<a alt="I am equally concerned about my investments losing or gaining value.  I am comfortable with taking some risk, but am also comfortable with giving up some return in exchange for excessive risk.">Average</a>
+						<a class="twolines" alt="I understand that daily changes in the markets can fluctuate significantly.  If market conditions result in 20-30% losses in a year, I would continue to hold my investments for the long-term.">Fairly High</a>
+						<a alt="My primary goal is for my investment to gain value.  If market conditions resulted in losses of 30-40% in a year, I would stick with my long-term investment plan and would likely add to my investment.">High</a>
+					</div>
+						
+					<p class="help"></p>
+				</section>
+				
+				<section class="radio">
+					<div class="info">
+						<h3><span>Economic outlook</span><a class="helpBtn" alt="Describe your personal view of the economy going forward and where you see it headed over the time you plan to invest in your HSA.">i</a></h3>
+						<p class="amount"><span class="hl"></span><span class="output">Negative</span></p>
+					</div>
+					
+					<div class="radioBtns">
+						<a class="selected" alt="Perceive no economic growth.">Negative</a>
+						<a class="twolines" alt="Perceive slight economic growth.">Slower Growth</a>
+						<a class="twolines" alt="Perceive the economy to grow at a moderate pace in the intermediate future.">Average Growth</a>
+						<a class="threelines" alt="Perceive the economy to grow at a higher rate over a prolonged period of time.">Above Average Growth</a>
+					</div>
+					
+					<p class="help"></p>
+				</section>
+				
+				<div id="calc">
+					<button class="btn btn-default" style="float:right">Calculate</button>
+					<button class="btn btn-default" style="float:back">Back</button>
+				</div>
+				</div> <!-- end #inputs -->
+				
+				<p id="same">Your allocation hasn't changed</p>
+				
+				<div id="pie_chart_1" class="chart" ></div>
+				
+				<div id="results">
+					<div id="flashContent"></div>
+					<canvas id="chart" width="350" height="350"></canvas>
+					<div id="fallbackImage"><!--<span>Loading Chart...--></span></div>
+
+					<div id="allocations">
+						<p class="tableHelp">Mauris viverra malesuada sagittis. Aliquam eu pretium elit. Praesent pulvinar dignissim nunc, non porta dui semper et. Sed semper gravida aliquam.</p>
+						<h2>Resulting Allocations</h2>
+						<table id="chartData">
+							<tr class="green">
+							  <td alt="Companies that have a market capitalization of between $10 billion and $200 billion whose sales and profits are expected to grow and/or pay regular dividends to shareholders.  This typically includes well-established companies with less volatility than smaller companies."><span></span><u>Large-Cap Equity</u><i>i</i></td>
+							  <td><b>15</b>%</td>
+							</tr>
+
+							<tr class="blue">
+							  <td alt="Companies with a market capitalization of between $300 million and $10 billion. Small Cap and Mid Cap funds invest in companies primarily in the securities of small and medium-sized companies. Risks associated with investments in small and medium-sized companies include less experienced management, limited product lines and financial resources, shorter operating histories, less publicly available information, reduced liquidity and increased price volatility."><span></span><u>Small/Mid-Cap Equity</u><i>i</i></td>
+							  <td><b>0</b>%</td>
+							</tr>
+
+							<tr class="yellow">
+							  <td alt="These types of funds invest in companies and debt instruments throughout the world. Investing in these securities involves considerations and potential risks not typically associated with investments in domestic corporations and obligations issued by the U.S. government. Risks include volatility associated with changes in currency values, economic, political and social unrest, the regulatory environment of the countries where the fund invests, as well as difficulties in receiving current and accurate information."><span></span><u>International</u><i>i</i></td>
+							  <td><b>5</b>%</td>
+							</tr>
+
+							<tr class="orange">
+							  <td alt="Fixed income funds generally invest in bonds and other debt instruments which pay a steady stream of income. Depending on the fund's objectives the fund managers may invest in government, municipal and corporate debt securities."><span></span><u>Fixed Income</u><i>i</i></td>
+							  <td><b>50</b>%</td>
+							</tr>
+
+							<tr class="purple">
+							  <td alt="Your HSA deposit account held at your HSA custodian that provides principal security and a modest interest rate. Savings Accounts are generally liquid and used to pay for current medical expenses from your HSA."><span></span><u>Savings Account</u><i>i</i></td>
+							  <td><b>30</b>%</td>
+							</tr>
+						</table>
+					</div><!-- End #allocations -->
+					
+					<!--<p><b>Please note:</b> This calculator is a mix of different types of securities that will mostly determine whether you will reach your goals.</p>-->
+					
+					<a id="backBtn">Back</a>
+				</div><!-- end #results -->
+			</div><!-- End sliders -->
+			
+		</div><!-- End content -->
+		<div class="content">
+			<p id="disclosure">Self-Directed Investing allows you to manage your account and make your own investment decisions. Although we will not make a recommendation or provide individual advice for your HSA Investment account, this tool may assist you in determining the mutual fund asset classes that best matches your objective and risk tolerance. Prospectuses containing complete information, including most recent month-end total returns, management fee charges and expenses, are available by clicking on the Prospectus link on the Investment Options page.  Investment return and principal value of an investment will fluctuate so that shares, when redeemed, may be more or less than their original principal cost.  An investment in mutual funds is not insured by the FDIC, NCUA or any other government agency.  All funds in your HSA are purchased at NAV as either no load or load waived fund.  Each of the fund companies reserves the right to charge a short-term redemption fee if held for less than the timeframe listed in the prospectus.</p>
+		</div>
+    <footer>
+
+    </footer>
+  </div><!-- end of wrapper -->
+  
+  
+  
+  <!-- JS scripts-->
+  <!--script defer src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/jquery.detectflash.js"></script-->
+   
+	<!--cript defer src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/mobile.js"></script--> <!-- Changes hover events to click (for touch screens) if on mobile -->
+	<script defer src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/chart.js"></script>
+	<!--script defer src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/math.js"></script>
+	<script defer src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/scripts.js"></script-->
+	<script src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/libs/jquery-ui-1.8.16.custom.min.js"></script>
+	<!--script src="http://hsaplanner.com/hsaplanner/hsaalloccalc/js/jquery.ui.touch-punch.js"></script--> <!-- Slider draggable for mobile -->
+</body>
+</html>
